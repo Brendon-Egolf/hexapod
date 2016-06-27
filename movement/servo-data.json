@@ -1,0 +1,23 @@
+{
+    "frequency":300,
+    "step":60,
+    "travel":1024,
+    "coaxa":{
+        "center":2048,
+        "boot":2048,
+        "minimum":1024,
+        "maximum":3076
+    },
+    "tibia":{
+        "center":2048,
+        "boot":2048,
+        "minimum":1024,
+        "maximum":3076
+    },
+    "femur":{
+        "center":2048,
+        "boot":2048,
+        "minimum":1024,
+        "maximum":3076
+    }
+}    
