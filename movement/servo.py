@@ -23,9 +23,13 @@ class Servo:
         BREAKOUT_ZERO_ADDRESS = 0x40
         BREAKOUT_ONE_ADDRESS = 0x41
         if breakout == 0:
-            self.pwm = Adafruit_PCA9685.PCA9685(address=BREAKOUT_ZERO_ADDRESS, busnum=2);
+            self.pwm = Adafruit_PCA9685.PCA9685(
+                    address=BREAKOUT_ZERO_ADDRESS, 
+                    busnum=2);
         elif breakout == 1:
-            self.pwm = Adafruit_PCA9685.PCA9685(address=BREAKOUT_ONE_ADDRESS, busnum=2);
+            self.pwm = Adafruit_PCA9685.PCA9685(
+                    address=BREAKOUT_ONE_ADDRESS,
+                    busnum=2);
             
         self.pwm.set_pwm_freq(frequency)
         

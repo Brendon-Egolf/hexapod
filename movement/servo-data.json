@@ -8,13 +8,13 @@
         "minimum":1024,
         "maximum":3076
     },
-    "tibia":{
+    "femur":{
         "center":2048,
         "boot":2048,
         "minimum":1024,
         "maximum":3076
     },
-    "femur":{
+    "tibia":{
         "center":2048,
         "boot":2048,
         "minimum":1024,
