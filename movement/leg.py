@@ -1,9 +1,10 @@
 #!/usr/bin/python
 
+from __future__ import division
 from servo import Servo
 import time
 import json
-import numpy
+import math
 
 class Leg:
     def __init__(self, name, limits):
@@ -15,7 +16,7 @@ class Leg:
             "tibia": self.get_servo('tibia')
         }
         self.limits = limits
-        print self.get_tibia_angle(self.leg_data['boot_point']['radius'])
+        self.set_leg(self.leg_data['boot_point'])
 
     def get_leg_data(self):
         with open('leg-data.json') as json_file:
@@ -32,18 +33,40 @@ class Leg:
             angle = self.limits[name]['maximum']
         if angle < self.limits[name]['minimum']:
             angle = self.limits[name]['minimum']
-        self[name].set_position(angle)
+        self.servos[name].set_position(angle)
 
     def set_limits(self, limits):
         self.limits = limits
     
-    def get_femur_angle(self):
-        return 1
+    def get_femur_angle(self, displacement, phi):
+        """uses the inverse law of cosines to find femur angle from displacement"""
+        lengths = self.leg_data['dimensions']['lengths']
+#direction = phi ? : phi / abs(phi)
+        return (phi + math.degrees(math.acos((
+                              ((lengths['femur']**2)
+                            + (displacement**2))
+                            - (lengths['tibia']**2))
+                            /
+                              (2 * (lengths['femur']) * (displacement)))))
 
-    def get_tibia_angle(self, radius):
-        dimensions = self.leg_data['dimensions']
-        return numpy.arccos(((numpy.square(dimensions['femur']) +
-                    numpy.square(dimensions['tibia'])) -
-                    numpy.square(radius)) /
-                    (2 * dimensions['femur'] * dimensions['tibia']))
+    def get_tibia_angle(self, displacement):
+        """uses the inverse law of cosines to find tibia angle from displacement"""
+        lengths = self.leg_data['dimensions']['lengths']
+        return (180 + math.degrees(math.acos((
+                              ((lengths['femur']**2)
+                            + (lengths['tibia']**2))
+                            - (displacement**2))
+                            /
+                              (2 * (lengths['femur']) * (lengths['tibia'])))))
+
+    def set_leg(self, coordinate):
+        self.set_servo('coaxa', coordinate['theta'])
+        self.set_servo('femur', self.get_femur_angle(self.get_displacement(coordinate['radius'], coordinate['phi']), coordinate['phi']))
+        self.set_servo('tibia', self.get_tibia_angle(self.get_displacement(coordinate['radius'], coordinate['phi'])))
+
+    def get_displacement(self, radius, phi):
+        coaxaLength = self.leg_data['dimensions']['lengths']['coaxa']
+        return (math.sqrt((coaxaLength**2)+(radius**2)-(2*coaxaLength*radius
+                        *math.cos(phi))))
+
 

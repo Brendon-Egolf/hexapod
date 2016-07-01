@@ -1,13 +1,19 @@
 {
     "boot_point":{
-        "radius":15,
+        "radius":200,
         "theta":0,
-        "phi":-45
+        "phi":-10
     },
     "dimensions":{
-        "coaxa":10,
-        "femur":10,
-        "tibia":10
+        "lengths":{
+            "coaxa":49.03,
+            "femur":76.77,
+            "tibia":116.18
+        },
+        "offsets":{
+            "femur":13.17,
+            "tibia":49.92
+        }
     },
     "leg_1":{
         "coaxa":12,

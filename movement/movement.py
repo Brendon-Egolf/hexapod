@@ -13,4 +13,4 @@ leg = Leg('leg_1',{"coaxa":{
                        "minimum":-60,
                        "maximum": 60
                    }
-                  })
+                  }) #TODO: add these to leg-data as default

@@ -17,7 +17,7 @@ class Servo:
         self.maximum = servo_data[name]['maximum']
         self.step = servo_data['step']
         self.travel = servo_data['travel']
-        self.write_pwm(self.boot)
+#       self.write_pwm(self.boot)
 
     def init_pwm(self, breakout, frequency):
         BREAKOUT_ZERO_ADDRESS = 0x40
@@ -45,7 +45,7 @@ class Servo:
         if pwm <= self.minimum:
             pwm = self.minimum
             print 'Minimum Limit'
-        return pwm 
+        return int(pwm)
 
     def write_pwm(self, pwm):
         self.pwm.set_pwm(self.port, 0, pwm)
