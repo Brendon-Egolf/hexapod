@@ -25,11 +25,11 @@ class Servo:
         if breakout == 0:
             self.pwm = Adafruit_PCA9685.PCA9685(
                     address=BREAKOUT_ZERO_ADDRESS, 
-                    busnum=2);
+                    busnum=2)
         elif breakout == 1:
             self.pwm = Adafruit_PCA9685.PCA9685(
                     address=BREAKOUT_ONE_ADDRESS,
-                    busnum=2);
+                    busnum=2)
             
         self.pwm.set_pwm_freq(frequency)
         
@@ -48,6 +48,7 @@ class Servo:
         return int(pwm)
 
     def write_pwm(self, pwm):
+
         self.pwm.set_pwm(self.port, 0, pwm)
 
     def set_position(self, angle):

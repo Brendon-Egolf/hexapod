@@ -1,4 +1,6 @@
 #!/usr/bin/python
 
-while True:
-    
+from movement.movement import Movement
+
+movement = Movement
+

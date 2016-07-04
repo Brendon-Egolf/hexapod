@@ -1,54 +1,68 @@
 {
-    "boot_point":{
-        "radius":200,
-        "theta":0,
-        "phi":-10
+  "boot_point": {
+    "radius": 240,
+    "theta": 0,
+    "phi": 0
+  },
+  "limits": {
+    "coaxa": {
+      "minimum": -60,
+      "maximum": 60
     },
-    "dimensions":{
-        "lengths":{
-            "coaxa":49.03,
-            "femur":76.77,
-            "tibia":116.18
-        },
-        "offsets":{
-            "femur":13.17,
-            "tibia":49.92
-        }
+    "femur": {
+      "minimum": -60,
+      "maximum": 60
     },
-    "leg_1":{
-        "coaxa":12,
-        "femur":13,
-        "tibia":14,
-        "breakout":0
-    },
-    "leg_2":{
-        "coaxa":8,
-        "femur":9,
-        "tibia":10,
-        "breakout":0
-    },
-    "leg_3":{
-        "coaxa":4,
-        "femur":5,
-        "tibia":6,
-        "breakout":0
-    },
-    "leg_4":{
-        "coaxa":8,
-        "femur":9,
-        "tibia":10,
-        "breakout":1
-    },
-    "leg_5":{
-        "coaxa":4,
-        "femur":5,
-        "tibia":6,
-        "breakout":1
-    },
-    "leg_6":{
-        "coaxa":0,
-        "femur":1,
-        "tibia":2,
-        "breakout":1
+    "tibia": {
+      "minimum": -60,
+      "maximum": 60
     }
+  }
+  "dimensions": {
+    "lengths": {
+      "coaxa": 49,
+      "femur": 76.77,
+      "tibia": 121.49
+    },
+    "offsets": {
+      "femur": 13.167,
+      "tibia": 42.96
+    }
+  },
+  "leg_1": {
+    "coaxa": 12,
+    "femur": 13,
+    "tibia": 14,
+    "breakout": 0
+  },
+  "leg_2": {
+    "coaxa": 8,
+    "femur": 9,
+    "tibia": 10,
+    "breakout": 0
+  },
+  "leg_3": {
+    "coaxa": 4,
+    "femur": 5,
+    "tibia": 6,
+    "breakout": 0
+  },
+  "leg_4": {
+    "coaxa": 8,
+    "femur": 9,
+    "tibia": 10,
+    "breakout": 1
+  },
+  "leg_5": {
+    "coaxa": 4,
+    "femur": 5,
+    "tibia": 6,
+    "breakout": 1
+  },
+  "leg_6": {
+    "coaxa": 0,
+    "femur": 1,
+    "tibia": 2,
+    "breakout": 1
+  }
 }
