@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
 from servo import Servo
-import time
 
-while True:
-    for i in range(14,11):
-        print 'instantiating servo: ', i
-        servo = Servo(i, 'coaxa', 0)
-        servo.set_position(0)
-        time.sleep(.5)
+coaxa = Servo(4, 'coaxa', 1)
+femur = Servo(5, 'femur', 1)
+tibia = Servo(6, 'tibia', 1)
+
+coaxa.set_position(0)
+femur.set_position(0)
+tibia.set_position(0)
