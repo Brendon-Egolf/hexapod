@@ -5,9 +5,9 @@ import time
 
 
 def set_servos(position):
-    for i in range(12,15):
+    for i in range(4,7):
         print 'instantiating servo: ', i
-        servo = Servo(i, 'coaxa', 0)
+        servo = Servo(i, 'coaxa', 1)
         servo.set_position(position)
         time.sleep(.5)
 
