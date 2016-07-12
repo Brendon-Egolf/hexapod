@@ -7,6 +7,9 @@
           <mappings>
             <mapping deploy="/hexapod" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/doc" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

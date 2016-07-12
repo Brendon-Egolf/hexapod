@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+# noinspection PyUnresolvedReferences
 import Adafruit_PCA9685
 import time
 import json
@@ -9,7 +10,7 @@ from pprint import pprint
 class Servo:
     def __init__(self, port, name, breakout):
         servo_data = self.get_servo_data()
-        self.init_pwm(breakout, servo_data['frequency'])
+        self.pwm = self.get_pwm(breakout, servo_data['frequency'])
         self.port = port
         self.center = servo_data[name]['center']
         self.boot = servo_data[name]['boot']
@@ -19,21 +20,17 @@ class Servo:
         self.travel = servo_data['travel']
 #       self.write_pwm(self.boot)
 
-    def init_pwm(self, breakout, frequency):
-        BREAKOUT_ZERO_ADDRESS = 0x40
-        BREAKOUT_ONE_ADDRESS = 0x41
-        if breakout == 0:
-            self.pwm = Adafruit_PCA9685.PCA9685(
-                    address=BREAKOUT_ZERO_ADDRESS, 
-                    busnum=2)
-        elif breakout == 1:
-            self.pwm = Adafruit_PCA9685.PCA9685(
-                    address=BREAKOUT_ONE_ADDRESS,
-                    busnum=2)
-            
-        self.pwm.set_pwm_freq(frequency)
+    @staticmethod
+    def get_pwm(breakout, frequency):
+        breakout_addresses = [0x40, 0x41]
+        pwm = Adafruit_PCA9685.PCA9685(
+                address=breakout_addresses[breakout],
+                busnum=2)
+        pwm.set_pwm_freq(frequency)
+        return pwm
         
-    def get_servo_data(self):
+    @staticmethod
+    def get_servo_data():
         with open('servo-data.json') as json_file:
             return json.load(json_file)
     
@@ -41,14 +38,13 @@ class Servo:
         pwm = self.center + (angle * (self.travel / self.step))
         if pwm >= self.maximum:
             pwm = self.maximum
-            print 'Maximum Limit'
+            print('Maximum Limit')
         if pwm <= self.minimum:
             pwm = self.minimum
-            print 'Minimum Limit'
+            print('Minimum Limit')
         return int(pwm)
 
     def write_pwm(self, pwm):
-
         self.pwm.set_pwm(self.port, 0, pwm)
 
     def set_position(self, angle):

@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="5289e442-6d01-4688-8e2c-654bff6643e6" name="beaglebone" url="http://192.168.7.2">
-        <fileTransfer host="192.168.7.2" port="22" rootFolder="/root" accessType="SFTP" username="root">
+        <fileTransfer host="192.168.7.2" port="22" rootFolder="/root" accessType="SFTP" password="" username="root">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

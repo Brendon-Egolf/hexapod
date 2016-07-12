@@ -4,7 +4,7 @@
     "theta": 0,
     "phi": 0
   },
-  "limits": {
+  "default-limits": {
     "coaxa": {
       "minimum": -60,
       "maximum": 60
@@ -17,7 +17,7 @@
       "minimum": -60,
       "maximum": 60
     }
-  }
+  },
   "dimensions": {
     "lengths": {
       "coaxa": 49,

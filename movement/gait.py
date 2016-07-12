@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
-class Path:
+
+class Gait:
     def __init__(self):
-        print('hi')
+        print('hello world')

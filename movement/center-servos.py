@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from servo import Servo
+from .servo import Servo
 
 coaxa = Servo(4, 'coaxa', 1)
 femur = Servo(5, 'femur', 1)
