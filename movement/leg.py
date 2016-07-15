@@ -13,7 +13,7 @@ class Leg:
         retrieve leg specific information from leg_data
         :param name: used to retrieve leg specific information from leg_data
         :type name: string"""
-        self.leg_data = self.get_leg_data()
+        self.leg_data = self.get_leg_hard_data()
         self.name = name
         self.servos = {
             "coaxa": self.get_servo('coaxa'),
@@ -24,7 +24,7 @@ class Leg:
         self.set_leg(self.leg_data['boot_point'])
 
     @staticmethod
-    def get_leg_data():
+    def get_leg_hard_data():
         """returns the data for all legs as a dictionary retrieved from a json file"""
         with open('leg-data.json') as json_file:
             return json.load(json_file)
@@ -137,3 +137,4 @@ class Leg:
 
     def get_length(self, leg):
         return self.leg_data['dimensions']['lengths'][leg]
+

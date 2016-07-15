@@ -9,7 +9,7 @@ from pprint import pprint
 
 class Servo:
     def __init__(self, port, name, breakout):
-        servo_data = self.get_servo_data()
+        servo_data = self.get_servo_hard_data()
         self.pwm = self.get_pwm(breakout, servo_data['frequency'])
         self.port = port
         self.center = servo_data[name]['center']
@@ -30,7 +30,7 @@ class Servo:
         return pwm
         
     @staticmethod
-    def get_servo_data():
+    def get_servo_hard_data():
         with open('servo-data.json') as json_file:
             return json.load(json_file)
     

@@ -2,9 +2,9 @@
 
 from .servo import Servo
 
-coaxa = Servo(4, 'coaxa', 1)
-femur = Servo(5, 'femur', 1)
-tibia = Servo(6, 'tibia', 1)
+coaxa = Servo(0, 'coaxa', 0)
+femur = Servo(1, 'femur', 0)
+tibia = Servo(2, 'tibia', 0)
 
 coaxa.set_position(0)
 femur.set_position(0)

@@ -36,6 +36,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'shpinx.ext.mathbase'
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
@@ -58,7 +59,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'hexapod'
+project = 'phoebe'
 copyright = '2016, Brendon Egolf, Jacob Kromm'
 author = 'Brendon Egolf, Jacob Kromm'
 
