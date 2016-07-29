@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from .servo import Servo
+from movement.servo import Servo
 import time
 
 
