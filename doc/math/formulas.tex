@@ -1,0 +1,28 @@
+==WORDS==
+\mathit{displacement} = \sqrt{(coaxa^2 + radius^2) - (2 \cdot coaxa \cdot radius \cdot \cos(\phi))}
+\alpha = \arccos\left(\frac{(\mathit{femur}^2 + \mathit{displacement}^2) - \mathit{tibia}^2}{2 \cdot \mathit{femur} \cdot \mathit{displacement}}\right)
+\beta = \arccos\left(\frac{(\mathit{femur}^2 + \mathit{tibia}^2) - \mathit{tibia}^2}{2 \cdot \mathit{femur} \cdot \mathit{tibia}}\right)
+\mathit{femurWorkingAngle} = (\alpha + \mathit{femurOffset})
+\mathit{tibiaWorkingAngle} = (\beta + \mathit{tibiaOffset})
+\mathit{femurReferenceAngle} = \arccos\left(\frac{(coaxa^2 + \mathit{displacement}^2) - radius^2}{2 \cdot coaxa \cdot \mathit{displacement}}\right)
+\mathit{femurAngle} = \mathit{femurWorkingAngle} - (180\degree - \mathit{femurReferenceAngle})
+==KEY==
+\text{variables} \\
+c = coaxa \\
+\mathit{f} = \mathit{femur} \\
+t = \mathit{tibia} \\
+c_o = \mathit{coaxaOffset} \\
+\mathit{f}_o = \mathit{femurOffset} \\
+t_o = \mathit{\mathit{tibia}Offset} \\
+r = radius \\
+d = \mathit{displacement}
+j = \mathit{femurWorkingAngle} \\
+s = \mathit{tibiaWorkingAngle} \\
+l = \mathit{femurReferenceAngle} \\
+e = \mathit{femurAngle}
+==VARIABLES==
+d = \sqrt{(c^2 + r^2) - (2 \cdot c \cdot r \cdot \cos(\phi))}
+\alpha = \arccos\left(\frac{(f^2 + d^2) - t^2}{2 \cdot f \cdot d}\right)
+\beta = \arccos\left(\frac{(f^2 + t^2) - d^2}{2 \cdot f \cdot t}\right)
+j = (\alpha + f_o)
+e = j - (180\degree - l)
