@@ -1,23 +1,369 @@
 {
-    "frequency":300,
-    "step":60,
-    "travel":1024,
-    "coaxa":{
-        "center":2048,
-        "boot":2048,
-        "minimum":1024,
-        "maximum":3076
+  "frequency": 60,
+  "step": 60,
+  "travel": 225,
+  "left": {
+    "port-0": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
     },
-    "femur":{
-        "center":2048,
-        "boot":2048,
-        "minimum":1024,
-        "maximum":3076
+    "port-1": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
     },
-    "tibia":{
-        "center":2048,
-        "boot":2048,
-        "minimum":1024,
-        "maximum":3076
+    "port-2": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-4": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-5": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-6": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-8": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-9": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-10": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
     }
+  },
+  "right": {
+    "port-4": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-5": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-6": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-8": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-9": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-10": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-12": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-13": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    },
+    "port-14": {
+      "coaxa": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "femur": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      },
+      "tibia": {
+        "center": 375,
+        "boot": 375,
+        "minimum": 150,
+        "maximum": 600
+      }
+    }
+  }
 }
